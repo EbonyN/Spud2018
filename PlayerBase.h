@@ -6,7 +6,7 @@
 
 	class PlayerBase{
   
-		public:
+		public:                                                  //the set speeds to move with
 			const int MAX_SPEED = 255;
 			const int THREE_QUARTER_SPEED = 190;
 			const int HALF_SPEED = 127;
@@ -14,17 +14,17 @@
 			const int MIN_SPEED = 30;
       Adafruit_MotorShield AFMS; 
      
-			PlayerBase();
+			PlayerBase();                                                           //functions to move with
 			
 			void movePlayerForward(int inSpeed);
-      void movePlayerForward2(int inSpeed, int inSpeed2, int inSpeed3);
+                        void movePlayerForward2(int inSpeed, int inSpeed2, int inSpeed3);
 			void movePlayerBackward(int inSpeed);
 			void movePlayerLeft(int inSpeed);
 			void movePlayerRight(int inSpeed);
 			void rotatePlayerRight(int inSpeed);
 			void rotatePlayerLeft(int inSpeed);
-      void moveDiagonallyRight(int inSpeed);
-      void moveDiagonallyLeft(int inSpeed);
+                        void moveDiagonallyRight(int inSpeed);
+                        void moveDiagonallyLeft(int inSpeed);
 			void stopPlayerAfter(int time);
       void stopPlayer();
 
