@@ -5,7 +5,7 @@
 //yellow goal = signature 3
 //blue goal = signature 2
 //ball = signature 1
-
+                                               //this has all the different functions for the pixy on spud, and what they do
 PlayerPixy::PlayerPixy(void) {
   myPixy.init();
  }
