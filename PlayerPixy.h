@@ -10,7 +10,7 @@ class PlayerPixy{
 
   Pixy2 myPixy;
   uint16_t blocks;
-      
+                             //functions for the pixy
   
   int ballX();
   int ballY();
