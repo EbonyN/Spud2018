@@ -6,11 +6,11 @@
 #include <Wire.h>
 #include <Adafruit_MotorShield.h>
 #include "PlayerBase.h"
-
+                                                //this has all the moving functions for Spud and what they do
   PlayerBase::PlayerBase(void) { 
       AFMS = Adafruit_MotorShield();
       AFMS.begin();
-   	  myMotorM1 = AFMS.getMotor(1);     
+      myMotorM1 = AFMS.getMotor(1);     
       myMotorM2 = AFMS.getMotor(2);
       myMotorM3 = AFMS.getMotor(3);      
       myMotorM4 = AFMS.getMotor(4);	
@@ -24,11 +24,11 @@
       myMotorM4->run(RELEASE);
   }
   void  PlayerBase::stopPlayerAfter(int time){
-  		delay(time);
-  		myMotorM1->run(RELEASE); 
-  		myMotorM2->run(RELEASE); 
-  		myMotorM3->run(RELEASE); 
-  		myMotorM4->run(RELEASE);   
+      delay(time);
+      myMotorM1->run(RELEASE); 
+      myMotorM2->run(RELEASE); 
+      myMotorM3->run(RELEASE); 
+      myMotorM4->run(RELEASE);   
   }
 	void PlayerBase::movePlayerForward(int inSpeed){
     //Serial.print("In moveForward");Serial.println(inSpeed, DEC);
@@ -118,16 +118,4 @@
     myMotorM4->setSpeed(inSpeed); 
     myMotorM4->run(BACKWARD);
    }
- /*  
-   PlayerBase::GoalieBase(void) {      //does this need to be a new thingy?
-      AFMS = Adafruit_MotorShield();  //change for goalie motorshield and pins
-      AFMS.begin();
-   	  myMotorGM1 = AFMS.getMotor(1);     
-      myMotorGM2 = AFMS.getMotor(2);
-      myMotorGM3 = AFMS.getMotor(3);      
-      myMotorGM4 = AFMS.getMotor(4);	
-      
-    	     }                        //add movements
- */
-   //eb end
- 
+
